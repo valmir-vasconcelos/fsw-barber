@@ -11,3 +11,10 @@ npx prisma db seed     // para rodar o seed do banco
 // obs: após a intalação, criar o arquivo .prettierrc.json na pasta raiz do projeto 
 npm i -D prettier prettier-plugin-tailwindcss
 
+
+// shadcn
+npx shadcn@latest init
+
+// componentes do shadcn
+npx shadcn@latest add button
+
