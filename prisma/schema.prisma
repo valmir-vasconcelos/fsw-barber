@@ -27,7 +27,7 @@ model Barbershop {
   name        String
   address     String
   phones      String
-  description String
+  description String @db.VarChar(450)
   imageUrl    String
   services    BarbershopService[]
   createdAt   DateTime            @default(now())
