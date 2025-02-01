@@ -4,3 +4,10 @@ npx prisma format
 npx prisma migrate dev --name init_db
 npm install -D ts-node // para rodar o seed do banco
 npx prisma db seed     // para rodar o seed do banco
+
+
+
+// plugin para organizar as classes do tailwind
+// obs: após a intalação, criar o arquivo .prettierrc.json na pasta raiz do projeto 
+npm i -D prettier prettier-plugin-tailwindcss
+
