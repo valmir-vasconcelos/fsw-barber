@@ -3,6 +3,7 @@
 
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+//id            String    @id @default(cuid())
 
 generator client {
   provider = "prisma-client-js"
@@ -14,7 +15,7 @@ datasource db {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            Int       @id @default(autoincrement())
   name          String?
   email         String?   @unique
   emailVerified DateTime?
@@ -52,7 +53,7 @@ model BarbershopService {
 model Booking {
   id        Int               @id @default(autoincrement())
   date      DateTime
-  userId    String
+  userId    Int
   user      User              @relation(fields: [userId], references: [id])
   serviceId Int
   service   BarbershopService @relation(fields: [serviceId], references: [id])
@@ -62,7 +63,7 @@ model Booking {
 
 model Account {
   id                       String  @id @default(cuid())
-  userId                   String  @unique
+  userId                   Int     @unique
   type                     String
   provider                 String
   providerAccountId        String
@@ -86,7 +87,7 @@ model Account {
 model Session {
   id           String   @id @default(cuid())
   sessionToken String   @unique
-  userId       String
+  userId       Int
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id])
 
