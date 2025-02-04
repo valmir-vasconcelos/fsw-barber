@@ -25,3 +25,8 @@ npx shadcn@latest add sonner
 npx shadcn@latest add sheet
 npx shadcn@latest add dialog
 
+
+
+npm i next-auth
+npm i @auth/prisma-adapter
+

@@ -25,7 +25,7 @@ const SidebarSheet = () => {
                             <LogInIcon />
                         </Button>
                     </DialogTrigger>
-                    <DialogContent>
+                    <DialogContent className="w-[90%]">
                         <DialogHeader>
                             <DialogTitle>Faça login na plataforma</DialogTitle>
                             <DialogDescription>
